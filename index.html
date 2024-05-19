@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+         .error {
+            border: 2px solid red; /* Add red border for error fields */
+        }
+    </style>
+   
+    
+</head>
+<body>
+ <div class="wrapper">
+    <h1><u>Student Registration Form</u></h1>
+    <p>Fill out the form carefully for registration</p>
+    <form id="registrationForm">
+        <h3>Student Name</h3>
+        <div class="mycon1">
+            <input type="text" id="Fname" name="Fname" maxlength="20" required>
+            <label for="Fname">First Name</label>
+        </div>
+        <div class="mycon2">
+            <input type="text" id="Mname" name="Mname" maxlength="20" required>
+            <label for="Mname">Middle Name</label>
+        </div>
+        <div class="mycon3">
+            <input type="text" id="Lname" name="Lname" maxlength="20" required>
+            <label for="Lname">Last Name</label><br>
+        </div>
+    
+        <div class="info-section">
+            
+            <span>Birth date</span>
+            <span>Gender</span>
+            
+        </div>
+        
+        
+            <div class="mycon4">
+            
+            <select id="Month" name="Month" required><br>
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select>
+            <label for="Month">Month</label>
+            </div>
+
+
+
+            <div class="mycon7">
+            
+            <select id="Day" name="days" required>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <label for="Day">Days</label>
+            </div>
+
+
+            <div class="mycon8">
+                    <select id="years" name="years" required>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+                <label for="years">Years</label>
+                </div>
+
+
+        
+            <div class="mycon9">
+                
+                <select id="Gender" name="Gender" required >
+                    
+                    <option value="Male"  >Male</option>
+                    <option value="Female">Female</option>
+                    
+
+                </select>
+            </div><br>
+
+        <h2>Address</h2>
+        <input class="myinput" type="text"  id="Address" name="Address" maxlength="250" required><br>
+        <label for="Address">Street Address</label>
+        
+        <input class="myinput" type="text"  id="Address" name="Address" >
+        <label for="Address">Street Address Line 2</label><br>  
+        <div class="mycon11">
+             <input type="text" id="city" name="city" maxlength="50" required>
+             <label for="city">City</label> 
+        </div>
+        <div class="mycon12">
+            <input type="number" id="State" name="State" maxlength="5" required >
+            <label for="State">State/Province</label> 
+       </div>
+       <input class="myinput" type="text" id="PA" name="PA">
+       <label for="PA">Postal/Zip Code</label>
+       <div class="info-section1">
+        <span>Student E-mail:</span>
+        <span>Mobile-Number:</span>
+    </div>
+    <div class="mycon13" >
+        <input type="email" id="email" name="email"  maxlength="250" required>
+        
+       </div>
+       <div class="mycon14" >
+       <input type="number" id="number" name="number"  maxlength="12" required>
+           </div><br>
+           <label for="email" >example@gmail.com</label>
+       <br><div class="info-section2">
+       <span>Phone-Number:</span><br>
+       <br><span>Work-Number:</span>
+    </div>
+
+    <div class="mycon17" >
+        <input type="tel" id="number" name="number"  maxlength="12" >
+        
+       </div>
+       <div class="mycon18" >
+       <input type="tel" id="number" name="number" maxlength="12">
+           </div><br>
+
+    
+                    
+                
+            
+
+           <h2>Course</h2>
+           <div class="mycon20">
+               <select id="Course" name="Course" maxlength="150" required>
+                   <option value="BS-DFCS">BS-DFCS</option>
+                   <option value="BS-CS">BS-CS</option>
+                   <option value="BS-DF">BS-DF</option>
+                   <option value="BS-AI">BS-AI</option>
+                   <option value="BS-AI">BS-AI</option>
+                   <option value="BS-DFCS">BS-URDU</option>
+                   <option value="BS-CS">BS-ENGLISH</option>
+                   <option value="BS-DF">BS-MATH</option>
+                   <option value="BS-AI">BS-AREOSPACE</option>
+                   <option value="BS-AI">BS-ROBTOICS</option>
+                   <option value="BS-AI">BS-PHYSICS</option>
+               </select>
+           </div><br>
+
+           <label for="Comments">Comments:</label><br>
+           <textarea name="Comments" style="width: 200px; height: 200px;" maxlength="500">
+
+           </textarea><br><br>
+   
+           <div class="mycon21">
+               <button type="button" id="submitBtn" style="background-color: green;">Submit Application</button>
+           </div>
+           <div class="mycon27">
+               <button type="reset" id="resetBtn" style="background-color: green;" >Clear Field</button>
+               
+           </div>
+            </div>
+    </form>
+</div>
+
+
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        // Perform form validation
+        var isValid = validateForm();
+        if (isValid) {
+            alert('Application Submitted Successfully!');
+            document.getElementById('registrationForm').reset();
+        } else {
+            alert('Please fill out all required fields.');
+        }
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', function() {
+        // Clear the form fields
+        document.getElementById('registrationForm').reset();
+    });
+
+    function validateForm() {
+        var fname = document.getElementById('Fname').value.trim();
+        var mname = document.getElementById('Mname').value.trim();
+        var lname = document.getElementById('Lname').value.trim();
+        var month = document.getElementById('Month').value;
+        var day = document.getElementById('Day').value;
+        var year = document.getElementById('years').value;
+        var phoneNumber = document.getElementById('number').value.trim();
+        var workNumber = document.getElementById('number').value.trim();
+        var course = document.getElementById('Course').value;
+        
+        var isValid = true;
+
+        if (phoneNumber === '') {
+            document.getElementById('number').classList.add('error');
+            isValid = false;
+        } else {
+            document.getElementById('number').classList.remove('error');
+        }
+
+        if (workNumber === '') {
+            document.getElementById('number').classList.add('error');
+            isValid = false;
+        } else {
+            document.getElementById('number').classList.remove('error');
+        }
+
+        if (course === '') {
+            document.getElementById('Course').classList.add('error');
+            isValid = false;
+        } else {
+            document.getElementById('Course').classList.remove('error');
+        }
+
+        var isValid = true;
+
+        if (month === '') {
+            document.getElementById('Month').classList.add('error');
+            isValid = false;
+        } else {
+            document.getElementById('Month').classList.remove('error');
+        }
+
+        if (day === '') {
+            document.getElementById('Day').classList.add('error');
+            isValid = false;
+        } else {
+            document.getElementById('Day').classList.remove('error');
+        }
+
+        if (year === '') {
+            document.getElementById('years').classList.add('error');
+            isValid = false;
+        } else {
+            document.getElementById('years').classList.remove('error');
+        }
+
+
+        if (fname === '') {
+            alert('First name is not filled. Please fill this field.');
+            return false;
+        }
+
+        if (mname === '') {
+            alert('Middle name is not filled. Please fill this field.');
+            return false;
+        }
+
+        if (lname === '') {
+            alert('Last name is not filled. Please fill this field.');
+            return false;
+        }
+
+        // Perform validation for other fields similarly
+
+        return true;
+    }
+</script>
+
+
+</body>
+</html>
